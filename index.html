@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Solicitud de Tickets</title>
+</head>
+<body>
+    <h1>Formulario de Solicitud de Ticket</h1>
+    <form action="/user/submit" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="area" placeholder="Área" required>
+        <textarea name="solicitud" placeholder="Describe tu solicitud" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

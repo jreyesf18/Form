@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Administración de Tickets</title>
+</head>
+<body>
+    <h1>Administrador de Tickets</h1>
+
+    <!-- Formulario para autenticar -->
+    <form id="loginForm">
+        <input type="text" placeholder="Usuario" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="button">Login</button>
+    </form>
+
+    <!-- Tabla de tickets pendientes -->
+    <table id="ticketTable">
+        <!-- Código JavaScript carga los datos aquí -->
+    </table>
+
+    <!-- Formulario para asignar responsable y cerrar tickets -->
+    <form action="/admin/accept" method="POST">
+        <input type="number" name="id" placeholder="ID del Ticket" required>
+        <select name="responsable" required>
+            <option>Roger Amez</option>
+            <option>Jerry Reyes</option>
+            <option>Hector Guillen</option>
+            <option>Melhany Roca</option>
+        </select>
+        <button type="submit">Aceptar Ticket</button>
+    </form>
+
+    <form action="/admin/close" method="POST">
+        <input type="number" name="id" placeholder="ID del Ticket" required>
+        <button type="submit">Cerrar Ticket</button>
+    </form>
+
+    <a href="/admin/download">Descargar Reporte</a>
+</body>
+</html>
